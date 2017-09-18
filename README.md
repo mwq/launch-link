@@ -1,4 +1,4 @@
-Quickly launch important web pages from command line in your repo: github page, contiunous integration page, live production site etc.
+Quickly launch important web pages from the command line: github page, contiunous integration page, live production site etc.
 
 # Install
 It only works on osx, it uses the "open" command
