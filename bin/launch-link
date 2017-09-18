@@ -1,0 +1,24 @@
+#!/usr/bin/ruby
+require "yaml"
+
+root_path =  `git rev-parse --show-toplevel`.strip()
+links_file = File.join(root_path, "links.yml")
+
+if File.exist?(links_file)
+  config = YAML.load_file(links_file)
+else
+  puts  "Not found: #{links_file}"
+  puts "Error: No links.yml exists."
+  exit(1)
+end
+command = ARGV[0]
+if command && link = config[command]
+  cmd = "open #{link}"
+  puts cmd
+  system(cmd)
+else
+ config.each do |name,url|
+   puts "#{name}\t#{url}"
+ end
+end
+
