@@ -14,7 +14,9 @@ repo: https://github.com/mwq/launch-link
 ci: https:://travis-ci.com/mwq/launch-link
 prod: http://mwq.com
 ```
-
+# Usage
+To access the ci page type
+```launch-link ci```anywhere in your repo.
 # Alias
 
 Optionally set up alias in your .bashrc / .zshrc:
